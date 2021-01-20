@@ -1,0 +1,179 @@
+@font-face{
+	font-family:'Kumbh Regular';
+	src: url('fonts/KumbhSans-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face{
+	font-family:'Kumbh Bold';
+	src:url(fonts/KumbhSans-Bold.ttf);
+	font-weight: 700;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background: #212121;
+}
+
+main{
+	display: flex;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: hsl(185, 75%, 39%);
+	overflow: hidden;
+}
+
+#top{
+	position: relative;
+	width: 800px;
+	height: 800px;
+	top: -65%;
+	left: -15.7%;
+}
+
+#bottom{
+	position: relative;
+	width: 900px;
+	height: 900px;
+	bottom: -52%;
+	right: 16.8%;
+}
+
+.container{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.card{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	height: 325px;
+	width: 305px;
+	background: url('images/bg-pattern-card.svg') no-repeat white;
+	background-size: 100% 121px;
+	border-radius: 5%;
+	box-shadow: 0px 40px 50px rgba(41,41,41,0.2);
+}
+
+.card .avatar{
+	position: relative;
+	top: calc(121px - 45px);
+	height: 90px;
+	width: 90px;
+	border-radius: 50%;
+	border: 5px solid white;
+	background-image: url('images/image-victor.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.nameCard{
+	display: block;
+	position: relative;
+	font-size: 12px;
+	font-family: 'Kumbh Bold';
+	top: 90px;	
+	color: hsl(229, 23%, 23%);
+}
+
+.nameCard span, .nameCard p{
+	margin-top: 5px;
+	font-family: 'Kumbh Regular';
+	color: hsl(227, 10%, 46%);
+}
+
+.data{
+	position: relative;
+	top: 120px;
+	width: 80%;
+	margin: 0px 30px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	border-top: 1px solid #ccc;
+	padding: 20px 10px;
+}
+
+.data .count{
+	font-family: 'Kumbh Bold';
+}
+
+.data .title{
+	font-size: 10px;
+	font-family: 'Kumbh Regular';
+	color: hsl(227, 10%, 46%);
+}
+
+
+
+@media (max-width: 900px){
+	main{
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+
+	#top{
+		position: relative;
+		width: 800px;
+		height: 800px;
+		top: -30%;
+		left: 20%;
+	}
+
+	#bottom{
+		position: relative;
+		width: 900px;
+		height: 900px;
+		bottom: -60%;
+		right: 16.8%;
+	}	
+}
+
+
+@media (max-width: 375px){
+	main{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.container{
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	#top{
+		position: relative;
+		width: 800px;
+		height: 800px;
+		top: -50%;
+		left: 20%;
+	}
+
+	#bottom{
+		position: relative;
+		width: 900px;
+		height: 900px;
+		bottom: -52%;
+		right: 16.8%;
+	}	
+}
